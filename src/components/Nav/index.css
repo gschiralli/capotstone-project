@@ -1,0 +1,10 @@
+nav ul {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Karla";
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
