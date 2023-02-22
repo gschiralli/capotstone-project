@@ -4,7 +4,7 @@ import Nav from "./../components/Nav/index";
 const HomePage = () => {
   return (
     <>
-      <header className="container">
+      <header>
         <Nav />
       </header>
       <main></main>
