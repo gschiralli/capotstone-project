@@ -95,11 +95,11 @@
     width: 100%;
     display: block;
     margin: 0 auto;
+    color: black;
   }
 
   .nav-links:hover {
     color: black;
-    background-color: #ffffff0d;
     transform: translateY(-1px);
     transition: all 0.3s ease;
   }

@@ -1,3 +1,4 @@
+import Cta from "../components/Cta";
 import Footer from "../components/Footer";
 import Nav from "./../components/Nav/index";
 
@@ -7,7 +8,12 @@ const HomePage = () => {
       <header>
         <Nav />
       </header>
-      <main style={{ height: "100vh" }}></main>
+      <main>
+        <section className="cta">
+          <Cta />
+        </section>
+        <section className="specials"></section>
+      </main>
       <Footer />
     </>
   );

@@ -2,7 +2,11 @@
 
 html {
   --primary-color: #495e57;
-  --secondary-color: #f4ce14;
+  --primary-color-2: #f4ce14;
+  --secondary-color-dark: #ee9972;
+  --secondary-color-light: #fbdabb;
+  --highlight-color-dark: #333333;
+  --highlight-color-light: #edefee;
 }
 
 body {
@@ -26,6 +30,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+p {
+  font-family: "Karla";
+  font-weight: 100;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  max-width: 15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Markazi Text";
+  font-weight: 200;
+  color: white;
+}
 .container {
   margin: 0 15%;
+}
+
+.cta {
+  background-color: var(--primary-color);
+  height: 16rem;
+  display: flex;
+  align-items: center;
 }
