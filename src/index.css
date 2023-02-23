@@ -49,9 +49,6 @@ h5 {
   font-weight: 200;
   color: white;
 }
-.container {
-  margin: 0 15%;
-}
 
 .cta {
   background-color: var(--primary-color);

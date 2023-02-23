@@ -1,6 +1,6 @@
-import Cta from "../components/Cta";
-import Footer from "../components/Footer";
-import Nav from "./../components/Nav/index";
+import Cta from "../components/Cta/Cta";
+import Footer from "../components/Footer/Footer";
+import Nav from "./../components/Nav/Nav";
 
 const HomePage = () => {
   return (

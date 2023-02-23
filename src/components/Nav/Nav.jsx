@@ -1,5 +1,5 @@
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
-import "./index.css";
+import "./nav.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { useState } from "react";

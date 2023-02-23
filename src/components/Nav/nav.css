@@ -17,7 +17,7 @@
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 80px;
   width: 100%;
 }
@@ -70,6 +70,9 @@
 }
 
 @media screen and (max-width: 960px) {
+  .navbar-container {
+    justify-content: space-between;
+  }
   .nav-menu {
     display: flex;
     flex-direction: column;
