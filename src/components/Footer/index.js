@@ -1,9 +1,12 @@
+import "./index.css";
 const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row">
-          <div className="col">{/* <img src="" alt="company Logo" /> */}</div>
+        <div className="grid">
+          <div className="col">
+            Logo{/* <img src="" alt="company Logo" /> */}
+          </div>
           <div className="col">
             <h2>Doormat Navigation</h2>
             <li>Home</li>

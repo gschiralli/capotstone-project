@@ -7,7 +7,7 @@ const HomePage = () => {
       <header>
         <Nav />
       </header>
-      <main></main>
+      <main style={{ height: "100vh" }}></main>
       <Footer />
     </>
   );

@@ -1,0 +1,65 @@
+/* Style the container */
+footer {
+  background-color: #edefee;
+  padding: 3.2rem 0rem;
+}
+.grid {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.8rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set the number of columns for different screen sizes */
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the list titles */
+h2 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+/* Style the list items */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #428bca;
+}
