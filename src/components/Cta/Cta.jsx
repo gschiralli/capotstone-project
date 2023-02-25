@@ -1,5 +1,6 @@
 import "./cta.css";
 import food1 from "../../assets/food1.jpg";
+import Button from "./../Button/Button";
 const Cta = () => {
   return (
     <div className="container">
@@ -12,7 +13,7 @@ const Cta = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi
             enim excepturi, vero quaerat ipsum natus corrupti quibusdam.
           </p>
-          <button>Reserve a Table</button>
+          <Button title={"Reserve a Table"} />
         </div>
         <div className="img-container">
           <img src={food1} alt="food" />

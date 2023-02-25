@@ -1,0 +1,15 @@
+button {
+  width: 14rem;
+  height: 2.5rem;
+  color: black;
+  background-color: var(--primary-color-2);
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
