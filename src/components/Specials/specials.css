@@ -1,6 +1,9 @@
 h1 {
   color: black;
 }
+.specials {
+  margin-bottom: 2rem;
+}
 .specials-flex {
   display: flex;
   justify-content: space-evenly;

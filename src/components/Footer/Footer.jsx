@@ -4,10 +4,10 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="grid">
-          <div className="col">
+          <div className="grid-col">
             Logo{/* <img src="" alt="company Logo" /> */}
           </div>
-          <div className="col">
+          <div className="grid-col">
             <h2>Doormat Navigation</h2>
             <li>Home</li>
             <li>About</li>
@@ -16,13 +16,13 @@ const Footer = () => {
             <li>Order Online</li>
             <li>Login</li>
           </div>
-          <div className="col">
+          <div className="grid-col">
             <h2>Contact</h2>
             <li>Address</li>
             <li>Phone Number</li>
             <li>Email</li>
           </div>
-          <div className="col">
+          <div className="grid-col">
             <h2>Social Media Links</h2>
             <li>Facebook</li>
             <li>Instagram</li>

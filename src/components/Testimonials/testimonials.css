@@ -1,0 +1,37 @@
+.testimonial {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 250px;
+  height: 400px;
+}
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.testimonial p {
+  max-width: none;
+  padding: none;
+  color: black;
+}
+.name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars {
+  color: #ffd900;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial {
+    width: 75%;
+    height: none;
+  }
+  .inner h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
