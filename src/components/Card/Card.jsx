@@ -3,7 +3,7 @@ import "./card.css";
 const Card = ({ imgsrc, title, price, desc }) => {
   return (
     <div class="card">
-      <img src={imgsrc} alt="Product image" />
+      <img src={imgsrc} alt="Food" />
       <div class="info">
         <div class="title-price">
           <h2 class="title">{title}</h2>
