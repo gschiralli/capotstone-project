@@ -1,5 +1,5 @@
 .testimonial {
-  background-color: #ffffff;
+  background-color: var(--highlight-color-light);
   padding: 30px;
   width: 250px;
   height: 400px;

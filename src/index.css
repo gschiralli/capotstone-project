@@ -35,7 +35,7 @@ p {
   font-family: "Karla";
   font-weight: 100;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.3rem;
   max-width: 15rem;
 }
@@ -52,7 +52,7 @@ h5 {
 
 .cta {
   background-color: var(--primary-color);
-  height: 16rem;
+  height: 19rem;
   display: flex;
   align-items: center;
 }
