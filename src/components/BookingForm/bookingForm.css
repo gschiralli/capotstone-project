@@ -1,0 +1,7 @@
+input,
+select {
+  border-width: 2px;
+  border-color: rgb(107 114 128);
+  padding: 2px;
+  border-radius: 0.375rem;
+}
