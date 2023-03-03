@@ -36,7 +36,7 @@
 .card .price {
   font-size: 20px;
   margin: 0;
-  color: var(--secondary-color-light);
+  color: black;
 }
 
 .card .description {

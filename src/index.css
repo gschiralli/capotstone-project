@@ -56,3 +56,6 @@ h5 {
   display: flex;
   align-items: center;
 }
+.testimonial-section {
+  background-color: #495e57;
+}
