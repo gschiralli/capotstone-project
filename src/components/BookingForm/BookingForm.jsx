@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./bookingForm.css";
+import dining from "../../assets/dining.jpg";
 
-function BookingForm() {
+function BookingForm({ availableTimes, dispatch }) {
   const [reservation, setReservation] = useState({
     date: "",
     time: "",
@@ -9,18 +10,12 @@ function BookingForm() {
     occasion: "Birthday",
   });
 
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setReservation({ ...reservation, [name]: value });
+    if (name === "date") {
+      dispatch({ type: "update_time", payload: value });
+    }
   };
 
   const handleSubmit = (e) => {
@@ -29,62 +24,75 @@ function BookingForm() {
   };
 
   return (
-    <form
-      style={{
-        display: "grid",
-        maxWidth: "200px",
-        gap: "20px",
-        margin: "0 auto",
-      }}
-      onSubmit={handleSubmit}
-    >
-      <label htmlFor="res-date">Choose date</label>
-      <input
-        type="date"
-        id="res-date"
-        name="date"
-        value={reservation.date}
-        onChange={handleInputChange}
-      />
+    <form onSubmit={handleSubmit}>
+      <div className="form-left">
+        <h1>Reserve Your Table </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Exercitationem autem eos nobis, dolorem iure aliquid?
+        </p>
+        <div className="mt-6">
+          <div className="pb-4">
+            <label htmlFor="res-date">Choose date</label>
 
-      <label htmlFor="res-time">Choose time</label>
-      <select
-        id="res-time"
-        name="time"
-        value={reservation.time}
-        onChange={handleInputChange}
-      >
-        {availableTimes.map((time) => (
-          <option key={time} value={time}>
-            {time}
-          </option>
-        ))}
-      </select>
+            <input
+              type="date"
+              name="date"
+              id="res-date"
+              onChange={handleInputChange}
+              value={reservation.date}
+            />
+          </div>
 
-      <label htmlFor="guests">Number of guests</label>
-      <input
-        type="number"
-        placeholder="1"
-        min="1"
-        max="10"
-        id="guests"
-        name="guests"
-        value={reservation.guests}
-        onChange={handleInputChange}
-      />
+          <div className="pb-4">
+            <label htmlFor="res-time">Choose time</label>
+            <select
+              type="email"
+              name="time"
+              id="res-time"
+              value={reservation.time}
+              onChange={handleInputChange}
+            >
+              {availableTimes.map((time) => (
+                <option key={time} value={time}>
+                  {time}
+                </option>
+              ))}
+            </select>
+          </div>
 
-      <label htmlFor="occasion">Occasion</label>
-      <select
-        id="occasion"
-        name="occasion"
-        value={reservation.occasion}
-        onChange={handleInputChange}
-      >
-        <option value="Birthday">Birthday</option>
-        <option value="Anniversary">Anniversary</option>
-      </select>
-
-      <input type="submit" value="Make Your reservation" />
+          {/* Country input field */}
+          <div className="pb-4">
+            <label htmlFor="guests">Number of guests</label>
+            <input
+              type="number"
+              placeholder="1"
+              min="1"
+              max="10"
+              id="guets"
+              name="guests"
+              onChange={handleInputChange}
+              value={reservation.guests}
+            />
+          </div>
+          <div className="pb-4">
+            <label htmlFor="occasion">Occasion</label>
+            <select
+              id="occasion"
+              name="occasion"
+              onChange={handleInputChange}
+              value={reservation.occasion}
+            >
+              <option value="Birthday">Birthday</option>
+              <option value="Anniversary">Anniversary</option>
+            </select>
+          </div>
+          <input type="submit" value="Make your reservation" />
+        </div>
+      </div>
+      <div className="img-div">
+        <img src={dining} alt="dining room" />
+      </div>
     </form>
   );
 }

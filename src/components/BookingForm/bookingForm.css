@@ -1,7 +1,93 @@
+form {
+  display: flex;
+  background-color: #ffffff;
+  width: 50%;
+  border-radius: 0.5rem;
+}
+
+.form-left {
+  padding: 3rem;
+  color: #374151;
+  flex: 1 1 0%;
+}
+
+form h1 {
+  padding-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+form p {
+  color: #6b7280;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+label {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 input,
 select {
-  border-width: 2px;
-  border-color: rgb(107 114 128);
-  padding: 2px;
+  padding: 0.5rem;
+  width: 70%;
   border-radius: 0.375rem;
+  border-width: 2px;
+  border-color: #6b7280;
+}
+.img-div {
+  position: relative;
+  flex: 1 1 0%;
+}
+
+.img-div img {
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color-2);
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  input,
+  select {
+    width: 90%;
+  }
+
+  .form-left {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-left {
+    padding: 0.5rem;
+  }
+  .img-div {
+    display: none;
+  }
+  input,
+  select {
+    width: 100%;
+  }
 }
