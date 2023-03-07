@@ -26,7 +26,7 @@ function BookingForm({ availableTimes, dispatch }) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-left">
-        <h1>Reserve Your Table </h1>
+        <h1>Reserve Your Table</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Exercitationem autem eos nobis, dolorem iure aliquid?

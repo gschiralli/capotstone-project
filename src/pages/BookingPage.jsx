@@ -2,17 +2,9 @@ import { useReducer } from "react";
 import BookingForm from "../components/BookingForm/BookingForm";
 import Footer from "../components/Footer/Footer";
 import Nav from "../components/Nav/Nav";
+import { initializeTimes, updateTimes } from "../utils/bookingUtils";
 
 const BookingPage = () => {
-  function updateTimes(state, action) {
-    return {
-      ...state,
-    };
-  }
-
-  function initializeTimes() {
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-  }
   const [state, dispatch] = useReducer(updateTimes, {
     availableTimes: initializeTimes(),
   });
