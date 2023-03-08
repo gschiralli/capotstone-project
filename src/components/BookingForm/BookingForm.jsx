@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./bookingForm.css";
 import dining from "../../assets/dining.jpg";
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [reservation, setReservation] = useState({
     date: "",
     time: "",
@@ -14,17 +14,17 @@ function BookingForm({ availableTimes, dispatch }) {
     const { name, value } = e.target;
     setReservation({ ...reservation, [name]: value });
     if (name === "date") {
-      dispatch({ type: "update_time", payload: value });
+      dispatch({ type: "update_time", payload: new Date(value) });
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(reservation);
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        submitForm(reservation);
+      }}
+    >
       <div className="form-left">
         <h1>Reserve Your Table</h1>
         <p>

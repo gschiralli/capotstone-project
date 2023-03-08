@@ -22,11 +22,11 @@ const CustomersSay = () => {
     },
   ];
   return (
-    <div class="testimonials">
-      <div class="inner">
+    <div className="testimonials">
+      <div className="inner">
         <h1>Testimonials</h1>
-        <div class="border"></div>
-        <div class="row">
+        <div className="border"></div>
+        <div className="row">
           {cols.map((col) => (
             <div key={col.id} className="col">
               {col.content}

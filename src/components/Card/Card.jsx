@@ -2,15 +2,15 @@ import "./card.css";
 
 const Card = ({ imgsrc, title, price, desc }) => {
   return (
-    <div class="card">
+    <div className="card">
       <img src={imgsrc} alt="Food" />
-      <div class="info">
-        <div class="title-price">
-          <h2 class="title">{title}</h2>
-          <p class="price">$ {price}</p>
+      <div className="info">
+        <div className="title-price">
+          <h2 className="title">{title}</h2>
+          <p className="price">$ {price}</p>
         </div>
-        <p class="description">{desc}</p>
-        <p class="delivery">Order delivery</p>
+        <p className="description">{desc}</p>
+        <p className="delivery">Order delivery</p>
       </div>
     </div>
   );

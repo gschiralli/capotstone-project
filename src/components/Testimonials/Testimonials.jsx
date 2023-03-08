@@ -4,10 +4,10 @@ import "./testimonials.css";
 
 const Testimonials = () => {
   return (
-    <div class="testimonial">
+    <div className="testimonial">
       <img src={p1} alt="personal img" />
-      <div class="name">John Doe</div>
-      <div class="stars">
+      <div className="name">John Doe</div>
+      <div className="stars">
         <FaStar />
         <FaStar />
         <FaStar />
