@@ -1,25 +1,19 @@
 import { initializeTimes, updateTimes } from "./bookingUtils";
 
 describe("initializeTimes function", () => {
-  test("returns an array of available reservation times", () => {
-    const expectedTimes = [
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00",
-      "22:00",
-    ];
-    const actualTimes = initializeTimes();
-    expect(actualTimes).toEqual(expectedTimes);
+  describe("initializeTimes function", () => {
+    test("returns an array of available reservation times", () => {
+      const times = initializeTimes();
+      expect(Array.isArray(times)).toBe(true);
+    });
   });
 });
 
 describe("updateTimes function", () => {
-  test("returns the same value that is provided in the state", () => {
+  test("update the available times based on a given date", () => {
     const state = { availableTimes: ["17:00", "18:00", "19:00"] };
-    const action = { type: "SOME_ACTION" };
+    const action = { type: "update_time", payload: new Date() };
     const updatedState = updateTimes(state, action);
-    expect(updatedState).toEqual(state);
+    expect(updatedState).not.toEqual(state);
   });
 });

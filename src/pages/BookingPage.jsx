@@ -17,6 +17,7 @@ const BookingPage = () => {
   const navigate = useNavigate();
 
   function submitForm(formData) {
+    console.log("clicked");
     if (submitAPI(formData)) {
       return navigate("/confirmation");
     }
