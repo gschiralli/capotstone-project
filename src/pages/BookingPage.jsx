@@ -7,20 +7,14 @@ import {
   updateTimes,
 } from "../utils/bookingUtils/bookingUtils";
 import { submitAPI } from "../utils/api/api";
-import { useNavigate } from "react-router-dom";
 
 const BookingPage = () => {
   const [state, dispatch] = useReducer(updateTimes, {
     availableTimes: initializeTimes(),
   });
 
-  const navigate = useNavigate();
-
   function submitForm(formData) {
-    console.log("clicked");
-    if (submitAPI(formData)) {
-      return navigate("/confirmation");
-    }
+    return submitAPI(formData);
   }
   return (
     <>

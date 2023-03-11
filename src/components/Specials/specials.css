@@ -3,6 +3,7 @@ h1 {
 }
 .specials {
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 .specials-flex {
   display: flex;
@@ -39,13 +40,12 @@ h1 {
   }
   .specials-flex {
     display: block;
-    margin: 6.5rem auto 2rem auto;
+    margin: 6.5rem auto -3rem auto;
     text-align: center;
   }
 
   .specials-flex h1 {
     text-align: center;
     margin: 1rem auto;
-    min-width: 30rem;
   }
 }

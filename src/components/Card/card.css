@@ -46,6 +46,8 @@
 }
 
 .card .delivery {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   color: white;
   color: var(--primary-color);

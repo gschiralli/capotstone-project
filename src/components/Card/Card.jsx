@@ -1,5 +1,5 @@
 import "./card.css";
-
+import { TbTruckDelivery } from "react-icons/tb";
 const Card = ({ imgsrc, title, price, desc }) => {
   return (
     <div className="card">
@@ -10,7 +10,9 @@ const Card = ({ imgsrc, title, price, desc }) => {
           <p className="price">$ {price}</p>
         </div>
         <p className="description">{desc}</p>
-        <p className="delivery">Order delivery</p>
+        <p className="delivery">
+          Order delivery &nbsp; <TbTruckDelivery />
+        </p>
       </div>
     </div>
   );

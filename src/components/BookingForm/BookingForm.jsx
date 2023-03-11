@@ -2,27 +2,34 @@ import "./bookingForm.css";
 import dining from "../../assets/dining.jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 function BookingForm({ availableTimes, dispatch, submitForm }) {
+  const navigate = useNavigate();
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const formik = useFormik({
     initialValues: {
       date: "",
       time: availableTimes[0],
       guests: 2,
-      occasion: "Birthday",
+      occasion: "",
     },
     validationSchema: Yup.object({
       date: Yup.date()
         .required("Please select a date")
-        .min(new Date(), "Cannot book for a past date"),
+        .min(today, "Cannot book for a past date"),
       time: Yup.string().required("Please select a time"),
       guests: Yup.number()
         .required("Please enter the number of guests")
         .min(2, "Minimum of 2 guests")
         .max(8, "Maximum of 8 guests"),
-      occasion: Yup.string().required("Please select an occasion"),
+      occasion: Yup.string(),
     }),
     onSubmit: (values) => {
-      submitForm(values);
+      if (submitForm(values)) {
+        navigate("/confirmation", { state: { ...values } });
+      }
     },
   });
 
@@ -130,8 +137,8 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
               id="occasion"
               name="occasion"
               {...formik.getFieldProps("occasion")}
-              required
             >
+              <option value=""></option>
               <option value="Birthday">Birthday</option>
               <option value="Anniversary">Anniversary</option>
             </select>
