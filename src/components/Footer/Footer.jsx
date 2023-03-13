@@ -1,11 +1,12 @@
 import "./footer.css";
+import logo from "../../assets/footer-logo.png";
 const Footer = () => {
   return (
     <footer>
       <div className="container">
         <div className="grid">
           <div className="grid-col">
-            Logo{/* <img src="" alt="company Logo" /> */}
+            <img src={logo} alt="company Logo" style={{ width: "7rem" }} />
           </div>
           <div className="grid-col">
             <h2>Doormat Navigation</h2>
